@@ -51,28 +51,28 @@ $walker = new Custom_Walker_Nav_Menu();
 <body id="<?php echo $post->post_name; ?>" <?php body_class($page_class); ?>>
   <div id="wrapper" class="hfeed">
   
-<img src="http://occasionsonline.com/mediakit/wp-content/themes/occasions-media-kit/images/THE-MAGAZINE-FOR-CELEBRATING-IN-STYLE.png" width="356" height="60" alt="The Magazine for Celebrating in Style">
+    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/THE-MAGAZINE-FOR-CELEBRATING-IN-STYLE.png" width="356" height="60" alt="The Magazine for Celebrating in Style">
 
-<div id="social-media">
+    <div id="social-media">
 
-<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-<input type="text" size="20" name="s" id="s" />
-<input type="submit" id="searchsubmit" value="Search" class="btn" />
-</form>
+      <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+      <input type="text" size="20" name="s" id="s" />
+      <input type="submit" id="searchsubmit" value="Search" class="btn" />
+      </form>
 
-<a href="http://mediakit.occasionsonline.com/feed"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_rss.png" alt="" border="0" /></a>
-<a href="http://www.occasionsonline.com/register/"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_email.png" alt="" border="0" /></a>
-<a href="http://www.facebook.com/pages/Occasions-Magazine/145861875458364" target="_blank"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_facebook.png" alt="" border="0" /></a>
-<a href="http://twitter.com/OccasionsMag" target="_blank"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_twitter.png" alt="" border="0" /></a>
+      <a href="<?php echo get_bloginfo('url'); ?>/feed"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_rss.png" alt="" border="0" /></a>
+      <a href="http://www.occasionsonline.com/register/"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_email.png" alt="" border="0" /></a>
+      <a href="http://www.facebook.com/pages/Occasions-Magazine/145861875458364" target="_blank"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_facebook.png" alt="" border="0" /></a>
+      <a href="http://twitter.com/OccasionsMag" target="_blank"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_twitter.png" alt="" border="0" /></a>
 
-</div>
+    </div>
 
-<div id="wrapper-shadow">
-<div id="logo">
-<a href="/index.php"><img src="http://occasionsonline.com/mediakit/wp-content/themes/occasions-media-kit/images/occasions-magazine.png" alt="Occasions Magazine Marketing Program" border="0" /></a>
-</div>
+    <div id="wrapper-shadow">
+      <div id="logo">
+        <a href="/index.php"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/occasions-magazine.png" alt="Occasions Magazine Marketing Program" border="0" /></a>
+      </div>
 
-<nav id="access" role="navigation">
+      <nav id="access" role="navigation">
           <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
           <div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wfts' ); ?>"><?php _e( 'Skip to content', 'wfts' ); ?></a></div>
           <?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
@@ -85,26 +85,10 @@ $walker = new Custom_Walker_Nav_Menu();
           }
           ?>
 
-        </nav>
+      </nav>
 
-<?php if (is_front_page()) { ?>
-
-    
-    
-  <?php  } else {
-	  
-  }
-	  
-	    ?>
-    
       <header class="page">
-     
-
-        
     
       </header>
-
-
-
 
       <section id="main">
