@@ -1,5 +1,4 @@
 jQuery.noConflict();
-//Shadowbox.init();
 
 jQuery(document).ready(function($){
 
@@ -18,20 +17,10 @@ jQuery(document).ready(function($){
     }
   });
 
-  var parentlink = $('.nav-meet-nicole > a');
-  $(parentlink).replaceWith('<a>' + parentlink.text() + '</a>');
-  /*
-  $('.menu ul li').each(function(){
-    var anchor = $(this).first();
-    var content = anchor.text()
-    $(this).has('ul').first().replaceWith('<span>' + content + '</span>');
-    if($(this).has('ul')) {
-      var anchor = $(this).first('a');
-      var content = anchor.text()
-      $(anchor).replaceWith(content);
-    }
-  });
-  */
+  /*  
+   * Remove last pipe from menus
+   *************************************************************/
+  $('.menu-sub-header li .pipe').last().remove();
 
 }); // end ready()
 

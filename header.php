@@ -83,6 +83,20 @@ $walker = new Custom_Walker_Nav_Menu();
           } else {
           wp_nav_menu( array( 'container_class' => 'menu-header', 'fallback_cb' => 'wfts_page_menu' ) ); 
           }
+
+          if ( is_section_check( 'about-occasions' ) ) {
+            wp_nav_menu( array( 'menu' => 'about', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>About Occasions</li>');</script>";
+          } elseif ( is_section_check( 'national-print' ) ) {
+            wp_nav_menu( array( 'menu' => 'national-print', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National Print</li>');</script>";
+          } elseif ( is_section_check( 'local-print' ) ) {
+            wp_nav_menu( array( 'menu' => 'local-print', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local Print</li>');</script>";
+          } elseif ( is_section_check( 'online' ) ) {
+            wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online</li>');</script>";
+          }
           ?>
 
       </nav>
