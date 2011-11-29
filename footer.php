@@ -19,7 +19,7 @@
      
      <?php if ( function_exists('wpcjt') ) wpcjt(1); ?>
      
-      <div id="colophon"> <a href="/index.php"><img src="http://occasionsonline.com/mediakit/wp-content/themes/occasions-media-kit/images/footer-logo.png" alt="Occasions Magazine" width="234" height="165" border="0" /></a></div><!-- #colophon -->
+      <div id="colophon"> <a href="/index.php"><img src="http://mediakit.occasionsonline.com/wp-content/themes/occasions-media-kit/images/footer-logo.png" alt="Occasions Magazine" width="234" height="165" border="0" /></a></div><!-- #colophon -->
     </footer><!-- #footer-wrapper -->
   
     </div><!-- #wrapper-shadow -->
