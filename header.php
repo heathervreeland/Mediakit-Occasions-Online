@@ -89,10 +89,10 @@ $walker = new Custom_Walker_Nav_Menu();
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>About Occasions</li>');</script>";
           } elseif ( is_section_check( 'national' ) ) {
             wp_nav_menu( array( 'menu' => 'national-print', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
-            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National Print</li>');</script>";
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National</li>');</script>";
           } elseif ( is_section_check( 'local' ) ) {
             wp_nav_menu( array( 'menu' => 'local-print', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
-            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local Print</li>');</script>";
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local</li>');</script>";
           } elseif ( is_section_check( 'online' ) ) {
             wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header', 'after' => '<span class="pipe">|</span>', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online</li>');</script>";
