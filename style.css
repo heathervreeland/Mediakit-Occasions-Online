@@ -2005,6 +2005,18 @@ span[frown] { transform: rotate(90deg); display:inline-block; color: #BBBBBB; }
   margin-left: 70px;
 }
 
+#contact #main, 
+.single #main, 
+.blog #main {
+  width:97%;
+  padding:3%;
+}
+#contact #access-left, 
+.single #access-left, 
+.blog #access-left {
+  display:none;
+}
+
 
 
 /* Gravity Forms
