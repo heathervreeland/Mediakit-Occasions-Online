@@ -14,6 +14,7 @@
     dynamic_sidebar( 'social-media-widget-area' );
 ?>
       </section><!-- #main -->
+      </div><!-- #page -->
   
 <footer id="footer" role="contentinfo">
      
