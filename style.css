@@ -198,7 +198,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 */
 
 #content { float: left; width:694px; }
-#home #content { width:674px; padding:0; margin: 0; }
+#home #content { float:none;width:100%; padding:0; margin: 0; }
 aside#primary { float: right; width:220px; padding:0 5px 0 20px;   }
 
 /*
@@ -1075,16 +1075,14 @@ div.post-header-date a span.month { text-align:center; color: #AAC379; text-tran
   font-size: 15px;
 }
 
-  #home #content .entry-content h1 { color:#00A79D !important; font-family: GillSansLight, Arial, Calibri, verdana, sans-serif !important; text-transform: none !important; font-size: 32px !important     }
-
-
-
-
+/* home */
+#home #content .entry-content h1 { color:#00A79D !important; font-family: GillSansLight, Arial, Calibri, verdana, sans-serif !important; text-transform: none !important; font-size: 32px !important;     }
+#home #content .entry-content p {   }
 
 #home .entry-content p {
-line-height: 28px;
-font-family: GillSansLight, Arial, Calibri, verdana, sans-serif !important;
-font-size:19px;
+  line-height: 28px;
+  font-family: GillSansLight, Arial, Calibri, verdana, sans-serif !important;
+  font-size:19px;
 }
 
 .entry-content p	{ line-height:24px; color:#666666;}
