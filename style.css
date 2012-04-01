@@ -291,6 +291,10 @@ header.page {
   z-index:2;
   margin: 0 0 0 0;
 }
+#home #main { 
+  width:97%;
+  padding:3%;
+}
 
 
 #content { 
@@ -725,6 +729,9 @@ div.menu-header ul#menu-navigation.menu li.active a {
     display:block;
     width:25%;
     min-height:100px;
+  }
+  #home #access-left {
+    display:none;
   }
   #access-left .menu-sub-header ul {
     height:40px;
