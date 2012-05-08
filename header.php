@@ -93,6 +93,7 @@ $walker = new Custom_Walker_Nav_Menu();
       </header>
 
       <div id="page" class="clearfix">
+      <?php if ( $template != 'full' ) { ?>
       <nav id="access-left">
         <?php
 
@@ -105,6 +106,9 @@ $walker = new Custom_Walker_Nav_Menu();
           } elseif ( is_section_check( 'local' ) ) {
             wp_nav_menu( array( 'menu' => 'local-print', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local</li>');</script>";
+          } elseif ( is_section_check( 'destination-occasions' ) ) {
+            wp_nav_menu( array( 'menu' => 'destination-occasions', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Destination</li>');</script>";
           } elseif ( is_section_check( 'online' ) ) {
             wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online</li>');</script>";
@@ -112,4 +116,5 @@ $walker = new Custom_Walker_Nav_Menu();
 
         ?>
       </nav>
+      <?php } ?>
       <section id="main">

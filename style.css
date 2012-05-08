@@ -718,7 +718,13 @@ header.page {
   * html #access ul li a:hover {
   }
   
-div.menu-header ul#menu-navigation.menu li.active a {
+div.menu-header ul#menu-navigation.menu li.active ul.sub-menu li a {
+ 
+ color: #ffffff; 
+ 
+ }
+ 
+ div.menu-header ul#menu-navigation.menu li.active a,  div.menu-header ul#menu-navigation.menu li.active ul.sub-menu li a:hover   {
  
  color: #00a79d; 
  
@@ -734,44 +740,49 @@ div.menu-header ul#menu-navigation.menu li.active a {
     display:none;
   }
   #access-left .menu-sub-header ul {
-    height:40px;
-    margin: 0;
+    width:185px;
+    margin: 20px 0 0 0;
     padding: 0 0 0 30px;
     background: #FFFFFF;
   }
   #access-left .menu-sub-header li {
-    padding-right:0;
+    margin:0;
+    border-top:3px double #cccccc;
+	padding: 10px 0;
   }
+  #access-left .menu-sub-header li:last-child {
+    border-bottom:3px double #cccccc;
+  }
+  #access-left .menu-sub-header li.active a,
   #access-left .menu-sub-header li a:hover,
   #access-left .menu-sub-header li.open,
   #access-left .menu-sub-header li.parent,
   #access-left .menu-sub-header li.active {
-	 color: #00a79d;
-  }
-  #access-left .menu-sub-header li .pipe {
-    font-size:14px;font-size: 1.4rem;
-    line-height: 40px; line-height: 4.0rem;
-    font-weight:normal;
+	 color: #AAC379;
   }
   #access-left .menu-sub-header li.sub-menu-header { 
     display:block;
-    font-family: GillSansRegular, Arial, Calibri, verdana, sans-serif; 
-    font-size:14px;font-size:1.4rem;
-    font-weight: normal;
-    color:#fff;
+    padding:0 10px 15px 0;
+    font-size:22px;font-size:2.2rem;
+    font-weight: 100;
     text-decoration:none;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    line-height:40px;line-height:4.0rem;
+    line-height:25px;line-height:2.5rem;
+    border:none;
+    color:#787364;
+    font-family: GillSansLight, Arial, Calibri, verdana, sans-serif; 
   }
   #access-left .menu-sub-header a {
-    display:inline;
+    font-size:14px; font-size:1.4rem;
     color: #00a79d;
+    line-height:16px;line-height:1.6rem;
+    text-transform:uppercase;
+    font-family: GillSansRegular, Arial, Calibri, verdana, sans-serif; 
+	letter-spacing: 1px;
   }
-  #access-left .menu-sub-header li.sub-menu-header {
-    padding-right:16px;
-    color:#656565;
-  }
+  
+    #access-left .menu-sub-header a:hover {
+	text-decoration:none;
+	}
  
 
  
@@ -1072,7 +1083,7 @@ div.post-header-date a span.month { text-align:center; color: #AAC379; text-tran
 
 /* page content */
 .entry-content  {  
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* home */
@@ -1085,7 +1096,7 @@ div.post-header-date a span.month { text-align:center; color: #AAC379; text-tran
   font-size:19px;
 }
 
-.entry-content p	{ line-height:24px; color:#666666;}
+.entry-content p	{ line-height:22px; color:#666666;}
   .entry-content h1 {
   }
   .entry-content h2 { 
@@ -2005,16 +2016,32 @@ span[frown] { transform: rotate(90deg); display:inline-block; color: #BBBBBB; }
   margin-left: 70px;
 }
 
+/*
+#reader-profile #main, 
+#destination-occasions #main, 
 #contact #main, 
+*/
 .single #main, 
-.blog #main {
+.blog #main, 
+.page-template-page-full-width-php #main {
   width:97%;
   padding:3%;
 }
+/*
+#reader-profile #access-left, 
+#destination-occasions #access-left, 
 #contact #access-left, 
+*/
 .single #access-left, 
 .blog #access-left {
   display:none;
+}
+/*
+#reader-profile #content,
+#destination-occasions #content { 
+*/
+.page-template-page-full-width-php #content {
+  width:100%;
 }
 
 
@@ -2066,6 +2093,58 @@ tr.blue-border {border-bottom: 1px dotted #CEE8E3;}
 table.table-border { border: 1px dotted #CEE8E3;  }
 
 table.table-border tr td {padding: 6px !important; }
+
+
+/* = Rate Pages
+-------------------------------------------------------------- */
+
+#pretty-rates {
+
+	font-family: GillSansLight !important;
+	margin:0 auto;
+
+}
+
+
+#pretty-rates h3 {font-weight:normal; text-transform: uppercase; font-family:AbadiMTCondExtraBoldRegular; color: #FF3399 !important; line-height:20px; line-height:2.0rem; }
+
+#pretty-rates p { font-size:20px; font-size:2.0rem; color: #00a79d; }
+
+#pretty-rates .three, #pretty-rates .four {
+clear:both;	
+	
+}
+
+#pretty-rates .three .issue  {
+
+	float: left;
+
+	width: 30%;
+
+	margin: 30px 1% 0 2%;
+	
+	text-align:center;
+
+}
+
+#pretty-rates .four .premium  {
+
+	float: left;
+
+	width: 22.85%;
+
+	margin: 30px 1%;
+	
+	text-align:center;
+
+}
+
+span.bracket {  color: #CCEDEB; padding:0 20px; font-size: 50px; font-family:AbadiMTCondExtraBoldRegular; }
+
+
+div.pretty-header { background:url(images/blue-line.png) repeat-x center 55px; clear:both;text-align:center; color: #00a79d; padding:40px 0 20px 0; }
+span.pretty-header-content { background-color:#fff; font-size: 30px; font-size: 3.0rem;   }
+
 
 /* =Mobile Safari ( iPad, iPhone and iPod Touch )
 -------------------------------------------------------------- */
