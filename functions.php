@@ -865,30 +865,4 @@ function wfts_form_defaults($fields) {
 }
 add_filter( 'comment_form_defaults', 'wfts_form_defaults', 10, 1 );
 
-/* Contextual_Help 
- * - output found in 'Help' drop downs on given pages
- * - Widgets
- * - Plugins
- * - ICS Calendar
- * - default links to Wordpress
- *
- *************************************************/
-add_action( 'contextual_help', 'add_help_text', 10, 3 );
-
-function add_help_text($contextual_help, $screen_id, $screen) { 
-//$contextual_help .= var_dump($screen); // use this to help determine $screen->id
-  if ('widgets' == $screen->id ) {
-    include('inc/help-widgets.php');
-  } elseif ('plugins' == $screen->id ) {
-    include('inc/help-plugins.php');
-  } elseif ('settings_page_ics-import' == $screen->id ) {
-    include('inc/help-ics.php');
-  } elseif ('upload' == $screen->id ) {
-    // Media Library
-    include('inc/help-media.php');
-  } else {
-    // if not found above at least put in the default links to Wordpress codex and forums
-    return $contextual_help;
-  }
-}
 ?>
