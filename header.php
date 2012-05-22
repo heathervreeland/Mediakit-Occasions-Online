@@ -104,6 +104,15 @@ $walker = new Custom_Walker_Nav_Menu();
             wp_nav_menu( array( 'menu' => 'national-print', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National</li>');</script>";
           } elseif ( is_section_check( 'local' ) ) {
+            wp_nav_menu( array( 'menu' => 'local-editions', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local Editions</li>');</script>";
+          } elseif ( is_section_check( 'destination-occasions' ) ) {
+            wp_nav_menu( array( 'menu' => 'destination-occasions', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Destination Occasions</li>');</script>";
+          } elseif ( is_section_check( 'print-advertising' ) ) {
+            wp_nav_menu( array( 'menu' => 'print-advertising', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Print Advertising</li>');</script>";
+          } elseif ( is_section_check( 'local' ) ) {
             wp_nav_menu( array( 'menu' => 'local-print', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local</li>');</script>";
           } elseif ( is_section_check( 'destination-occasions' ) ) {
