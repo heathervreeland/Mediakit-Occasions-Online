@@ -647,7 +647,7 @@ header.page {
     text-align:center;
   }
   #access li a:hover,
-  #access li.open,
+  #access li.open a,
   #access li.parent,
   #access li.active {
 	 color: #00a79d;
