@@ -153,7 +153,7 @@ if ( ! is_admin() ) {
     wp_deregister_script('jquery'); 
     wp_deregister_script('jquery-ui'); 
       /* using wp_register_script() to register updated libraries */
-    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js', false, '1.5.2', true );   
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', false, '1.7.2', true );   
     wp_register_script('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js', false, '1.8.11', true );   
       /* using wp_enqueue_script() to load the updated libraries */
     wp_enqueue_script('jquery'); 

@@ -44,8 +44,8 @@ $walker = new Custom_Walker_Nav_Menu();
       wp_enqueue_script( 'comment-reply','/wp-includes/js/jquery/comment-reply.js','','',true );
 
     wp_head();
+  /*<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php bloginfo('stylesheet_directory'); ?>/inc/js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>*/
   ?>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php bloginfo('stylesheet_directory'); ?>/inc/js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
 </head>
 <?php flush() ?>
 <body id="<?php echo $post->post_name; ?>" <?php body_class($page_class); ?>>

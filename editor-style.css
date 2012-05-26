@@ -199,7 +199,6 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 
 #content { float: left; width:694px; }
 #home #content { float:none;width:100%; padding:0; margin: 0; }
-#content.full-width { float:none;width:100%; }
 aside#primary { float: right; width:220px; padding:0 5px 0 20px;   }
 
 /*
@@ -376,7 +375,6 @@ code {
 /* Main global 'theme' and typographic styles  */
 body {
 	color:#666;
-	background: url(images/oo_bg.jpg) repeat center;  
 }
 h1,
 h2,
@@ -886,11 +884,11 @@ padding-bottom:40px;
     padding-bottom:8px;
   }
   .page #content h1{
-    font-family: AbadiMTCondExtraBoldRegular, Arial, Calibri, verdana, sans-serif !important; 
     font-size:28px !important; font-size:2.8rem !important;
-    color:#F29EB3 !important;
     line-height:32px;line-height:3.2rem;
-    text-transform: uppercase !important;
+    color:#F29EB3 !important;
+	font-family: AbadiMTCondExtraBoldRegular, Arial, Calibri, verdana, sans-serif !important; 
+	text-transform: uppercase !important;
   }
   
   
@@ -2015,16 +2013,6 @@ span[frown] { transform: rotate(90deg); display:inline-block; color: #BBBBBB; }
   font-size: 20px !important;
   margin-left: 70px;
 }
-.single-networking-event section#content article header  h1.entry-title {
-  font-family: AbadiMTCondExtraBoldRegular, Arial, Calibri, verdana, sans-serif; 
-  font-size:28px !important;font-size:2.8rem !important;
-  color:#F29EB3;
-  line-height:32px;line-height:3.2rem;
-  text-transform: uppercase;
-  margin-bottom:13px;
-  margin-left: 0;
-}
-
 
 /*
 #reader-profile #main, 

@@ -9,7 +9,9 @@
  *
  */
 
-get_header(); ?>
+get_header(); 
+
+?>
 
     <section id="content" class="one-column" role="main">
 
