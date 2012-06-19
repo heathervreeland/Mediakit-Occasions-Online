@@ -46,6 +46,19 @@ $walker = new Custom_Walker_Nav_Menu();
     wp_head();
   /*<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php bloginfo('stylesheet_directory'); ?>/inc/js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>*/
   ?>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4722973-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <?php flush() ?>
 <body id="<?php echo $post->post_name; ?>" <?php body_class($page_class); ?>>
