@@ -73,10 +73,12 @@ $walker = new Custom_Walker_Nav_Menu();
       <input type="submit" id="searchsubmit" value="Search" class="btn" />
       </form>
 
-      <a href="<?php echo get_bloginfo('url'); ?>/feed"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_rss.png" alt="" border="0" /></a>
-      <a href="http://www.occasionsonline.com/register/"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_email.png" alt="" border="0" /></a>
-      <a href="http://www.facebook.com/pages/Occasions-Magazine/145861875458364" target="_blank"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_facebook.png" alt="" border="0" /></a>
-      <a href="http://twitter.com/OccasionsMag" target="_blank"><img src="http://www.occasionsonline.com/wp-content/themes/oo1/images/oo_social_twitter.png" alt="" border="0" /></a>
+      <a href="<?php echo get_bloginfo('url'); ?>/feed"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/icon-rs.png" alt="" border="0" /></a>
+      <a href="http://www.occasionsonline.com/register/"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/icon-em.png" alt="" border="0" /></a>
+      <a href="http://www.facebook.com/pages/Occasions-Magazine/145861875458364" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/icon-fb.png" alt="" border="0" /></a>
+      <a href="http://twitter.com/OccasionsMag" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/icon-tw.png" alt="" border="0" /></a>
+       <a href="http://pinterest.com/OccasionsMag" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/icon-pi.png" alt="" border="0" /></a>
+        <a href="https://plus.google.com/103715157874487467654" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/icon-gp.png" alt="" border="0" /></a>
 
     </div>
 
