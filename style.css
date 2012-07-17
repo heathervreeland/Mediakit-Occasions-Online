@@ -2201,22 +2201,34 @@ div.peeps-contact {
 	margin-bottom:10px;
 }
 .publisher-contact img, .peeps-contact img {
+	border:0 !important;
+	box-shadow: none !important;
 	padding:5px;
+	width: auto !important;
 }
 .team-bio {
 	font-size:12px;
 	line-height:19px;
 	color: #666;
 	clear:both;
+	margin-bottom: 20px;
 }
 hr.blue {
 	clear:both;
 	border-color: #b4e5df;
+	width: 102%;
+	padding-bottom: 10px;
 }
 .peeps-wrap {
 	float:left;
 	width:30%;
 	margin-right:5%;
+}
+.peeps-wrap img {
+	border: 7px solid #fff;
+	box-shadow: 0 0 10px #CCCCCC;
+	-webkit-box-shadow: 0 0 10px #CCCCCC;
+	width:100%;
 }
 .peeps-wrap.last {
 	margin-right:0%;
