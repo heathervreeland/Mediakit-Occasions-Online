@@ -846,9 +846,11 @@ function wfts_related_posts() {
  *  wfts_insert_share_icons()
  *  wfts_insert_like_button()
  *  wfts_insert_rss_feed()
+ *  occasions_breadcrumbs()
  *
  *************************************************/
 include('inc/lib/function/inserts.php');
+include('inc/lib/function/breadcrumb.php');
 
 /*
  * Modify standard Post Comment defaults 

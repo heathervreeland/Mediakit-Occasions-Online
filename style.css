@@ -925,11 +925,19 @@ padding-bottom:40px;
     background: #FC0;
   }
   /* Breadcrumb */
+  header.page,
   #content #breadcrumb {
     padding-bottom:20px;
     font-size:12px;font-size:1.2rem;
     line-height:18px;line-height:1.8rem;
     color:#999999;
+  }
+  header.page {
+    margin-left:30px;
+    padding-bottom:0px;
+  }
+  header.page .pipe {
+    color:#AAC379;
   }
 
 /* page specific content */

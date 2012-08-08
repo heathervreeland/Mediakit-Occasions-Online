@@ -1,20 +1,43 @@
 <?php
 
 /**
+ * Retrieve Ancestors
+ *************************************************/
+
+
+/**
  * Sidebar location check
  * - used to determine current page and parent page
  *************************************************/
-function is_section_check($parentname) {
+function is_section_check( $parentname, $post ) {
 
   $is_section = false;
 
-  $current_page = get_page($post->ID);
-  $current_title= $current_page->post_name;
-  $parent_page = get_page($current_page->post_parent);
-  $parent_title = $parent_page->post_name;
+  if ( $parentname != null ) {
 
-  if ( $current_title == $parentname || $parent_title == $parentname )
-    $is_section = true;
+    // get acnestors of current $post object
+    $parents = get_post_ancestors($post);
+
+    // get a count of ancestors
+    $num_parents = count($parents);
+
+    // get the ID from the last item in the array.  This is the top level ancestor.
+    $grandest_parent_id = $parents[$num_parents-1];
+
+    // get the $post object of the top level ancestor
+    $grandest_parent = get_page($grandest_parent_id); 
+
+    // checking to see if we are on the top page in the section
+    if ( $parentname == $post->post_name ) {
+      $is_section = true;
+    }
+
+    // is the top level ancestor located in the ancestor array, and does it's name equal $parentname?
+    if ( in_array($grandest_parent_id, $parents) && $parentname == $grandest_parent->post_name  ) {
+      $is_section = true;
+    }
+
+  }
 
   return $is_section;
 }

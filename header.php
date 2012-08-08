@@ -18,6 +18,9 @@ $this_location = $locations['primary'];
 // create a walker to be used if a menu has been created
 $walker = new Custom_Walker_Nav_Menu();
 
+// lets just be sure the current $post object is available for is_section_check() for left navigation below
+global $post;
+
 ?><!DOCTYPE html  xmlns:fb="http://www.facebook.com/2008/fbml">
 <!--[if lt IE 7 ]> <html <?php language_attributes('html'); ?> class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html <?php language_attributes('html'); ?> class="no-js ie7"> <![endif]-->
@@ -104,7 +107,7 @@ $walker = new Custom_Walker_Nav_Menu();
       </nav>
 
       <header class="page">
-    
+        <?php occasions_breadcrumbs($post); ?>
       </header>
 
       <div id="page" class="clearfix">
@@ -112,31 +115,34 @@ $walker = new Custom_Walker_Nav_Menu();
       <nav id="access-left">
         <?php
 
-          if ( is_section_check( 'about-occasions' ) ) {
+          // clunky but effective manner to determine which menu to pull
+          // current $post object is passed to is_section_chec() for ancestry access
+
+          if ( is_section_check( 'about-occasions', $post ) ) {
             wp_nav_menu( array( 'menu' => 'about', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>About Occasions</li>');</script>";
-          } elseif ( is_section_check( 'national' ) ) {
+          } elseif ( is_section_check( 'national', $post ) ) {
             wp_nav_menu( array( 'menu' => 'national-print', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National</li>');</script>";
-          } elseif ( is_section_check( 'local' ) ) {
+          } elseif ( is_section_check( 'local', $post ) ) {
             wp_nav_menu( array( 'menu' => 'local-editions', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local Editions</li>');</script>";
-          } elseif ( is_section_check( 'destination-occasions' ) ) {
+          } elseif ( is_section_check( 'destination-occasions', $post ) ) {
             wp_nav_menu( array( 'menu' => 'destination-occasions', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Destination</li>');</script>";
-          } elseif ( is_section_check( 'online' ) ) {
+          } elseif ( is_section_check( 'online', $post ) ) {
             wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online</li>');</script>";
-          } elseif ( is_section_check( 'print-advertising' ) ) {
+          } elseif ( is_section_check( 'print-advertising', $post ) ) {
             wp_nav_menu( array( 'menu' => 'print-advertising', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Print Advertising</li>');</script>";
-          } elseif ( is_section_check( 'online-advertising' ) ) {
+          } elseif ( is_section_check( 'online-advertising', $post ) ) {
             wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online Advertising</li>');</script>";
-          } elseif ( is_section_check( 'networking-events' ) ) {
+          } elseif ( is_section_check( 'networking-events', $post ) ) {
             wp_nav_menu( array( 'menu' => 'networking-events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Networking Events</li>');</script>";
-          } elseif ( is_section_check( 'marketing-program' ) ) {
+          } elseif ( is_section_check( 'marketing-program', $post ) ) {
             wp_nav_menu( array( 'menu' => 'marketing-programs', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Marketing Program</li>');</script>";
           }
