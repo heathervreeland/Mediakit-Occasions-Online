@@ -18,6 +18,16 @@ function is_section_check( $parentname, $post ) {
     // get acnestors of current $post object
     $parents = get_post_ancestors($post);
 
+    // generate an empty array
+    $parent_names = array();
+
+    // add all ancestor slugs to $parent_names
+    foreach ( $parents as $parent ) {
+      $the_post = get_page($parent);
+      $the_post_name = $the_post->post_name;
+      $parent_names[] = $the_post_name;
+    }
+
     // get a count of ancestors
     $num_parents = count($parents);
 
@@ -29,6 +39,12 @@ function is_section_check( $parentname, $post ) {
 
     // checking to see if we are on the top page in the section
     if ( $parentname == $post->post_name ) {
+      $is_section = true;
+    }
+
+    // need to catch menus that are set for children to top level ancestor
+    // does $parentname appear in an array of post slugs?
+    if ( in_array ( $parentname, $parent_names ) ) {
       $is_section = true;
     }
 
