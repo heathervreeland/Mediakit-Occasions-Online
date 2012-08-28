@@ -139,12 +139,12 @@ global $post;
           } elseif ( is_section_check( 'online-advertising', $post ) ) {
             wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online Advertising</li>');</script>";
+          } elseif ( is_section_check( 'networking', $post ) ) {
+            wp_nav_menu( array( 'menu' => 'networking-events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Networking Events</li>');</script>";
           } elseif ( is_section_check( 'events', $post ) ) {
             wp_nav_menu( array( 'menu' => 'events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Events</li>');</script>";
-          } elseif ( is_section_check( 'networking-events', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'networking-events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
-            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Networking Events</li>');</script>";
           } elseif ( is_section_check( 'marketing-program', $post ) ) {
             wp_nav_menu( array( 'menu' => 'marketing-programs', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Marketing Program</li>');</script>";
