@@ -685,6 +685,7 @@ header.page {
   #access li {
     float:left;
     position: relative;
+    width:12%;
     height:40px;
     margin:0;
     padding-right:22px;
