@@ -142,6 +142,9 @@ global $post;
           } elseif ( is_section_check( 'networking', $post ) ) {
             wp_nav_menu( array( 'menu' => 'networking-events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Networking Events</li>');</script>";
+          } elseif ( is_section_check( 'expo', $post ) ) {
+            wp_nav_menu( array( 'menu' => 'expo', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Expo</li>');</script>";
           } elseif ( is_section_check( 'events', $post ) ) {
             wp_nav_menu( array( 'menu' => 'events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Events</li>');</script>";
