@@ -16,6 +16,50 @@
       </section><!-- #main -->
       </div><!-- #page -->
   
+<div id="newsletter-sign-up">
+
+<span>Receive special advertising discounts &amp; promotions!</span>
+
+<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2900" accept-charset="UTF-8" onsubmit="return verifyRequired2900();" >
+<input type="hidden" name="redirect" value="http://mediakit.occasionsonline.com/thank-you/">
+<input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html">
+    <input type="text" name="fields_fname" placeholder="First Name">
+    <input type="text" name="fields_email" placeholder="Email">
+    <input type="submit" name="Submit" value="Go!">
+    <input type="hidden" name="listid" value="41392">
+    <input type="hidden" name="specialid:41392" value="QS3F">
+    <input type="hidden" name="clientid" value="1194751">
+    <input type="hidden" name="formid" value="2900">
+    <input type="hidden" name="reallistid" value="1">
+    <input type="hidden" name="doubleopt" value="0">
+</form>
+<script type="text/javascript">
+
+var icpForm2900 = document.getElementById('icpsignup2900');
+
+if (document.location.protocol === "https:")
+
+	icpForm2900.action = "https://app.icontact.com/icp/signup.php";
+function verifyRequired2900() {
+  if (icpForm2900["fields_email"].value == "") {
+    icpForm2900["fields_email"].focus();
+    alert("The Email field is required.");
+    return false;
+  }
+  if (icpForm2900["fields_fname"].value == "") {
+    icpForm2900["fields_fname"].focus();
+    alert("The First Name field is required.");
+    return false;
+  }
+
+
+return true;
+}
+</script>
+
+</div><!-- #newsletter-sign-up -->
+
+
 <footer id="footer" role="contentinfo">
      
      <?php wp_nav_menu( array('menu' => 'footer-pics' )); ?>

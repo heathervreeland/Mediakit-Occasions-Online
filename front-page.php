@@ -10,19 +10,23 @@
 
 get_header(); ?>
 
+	<hr class="top-line" />
+
    <section id="content" class="one-column" role="main">
 
 
+  	<div id="did-you-know">
+  
+  		<?php if ( ! dynamic_sidebar( 'home-page-widget-area' ) ) : ?>
+			<?php endif; // end sidebar widget area ?> 
+  
+  </div><!-- #did-you-know -->
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-
-
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
         <section class="entry-content">
-
-
-
 
           <?php the_content(); ?>
 
@@ -31,12 +35,7 @@ get_header(); ?>
       </article><!-- #post-## -->
 
 <?php endwhile; ?>
-
-   
-
    
     </section><!-- #content -->
-    
-
     
 <?php get_footer(); ?>

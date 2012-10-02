@@ -335,8 +335,9 @@ header.page {
   margin: 0 0 0 0;
 }
 #home #main { 
-  width:97%;
-  padding:3%;
+  /* changed to add menu on home page */
+  /*width:97%;
+  padding:3%;*/
 }
 
 
@@ -780,8 +781,33 @@ div.menu-header ul#menu-navigation.menu li.active ul.sub-menu li a {
     min-height:100px;
   }
   #home #access-left {
-    display:none;
+		float: right;
+		margin-left: 20px;
+		width: 21%;
   }
+	#home #access-left ul#menu-quick-links.menu li.sub-menu-header {
+		font-family: GillSansRegular;
+		font-size: 15px;
+		letter-spacing: 1px;
+		line-height: 50px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #00A79D;
+		background: url(images/quick-links-bg.png) no-repeat;
+		width: 144px;
+		height: 100px;
+		z-index: 99999;
+		position: relative;
+		margin: -33px 0 0 20px;
+		padding-left: 4px;
+  }
+	#home #access-left .menu-sub-header li {
+		padding: 6px 0;
+	}
+	#home #access-left li.nav-contact-sales {
+		border-top: 0;
+		padding-top: 0;
+	}
   #access-left .menu-sub-header ul {
     width:185px;
     margin: 20px 0 0 0;
@@ -830,12 +856,12 @@ div.menu-header ul#menu-navigation.menu li.active ul.sub-menu li a {
  
 nav#access ul#menu-navigation.menu li.nav-news { border-right:0; }
  
-div#nav-footer.menu-footer-container ul#menu-footer.menu li#menu-item-8229.menu-item { padding-right: 0; border:0; font-family: GillSansRegular, Arial, Calibri, verdana, sans-serif;   }
+div#nav-footer.menu-footer-container ul#menu-footer.menu li#menu-item-8229.menu-item { padding-right: 0; border:0; font-family: GillSansRegular, Arial, Calibri, verdana, sans-serif; letter-spacing: 1px;   }
   
   
 div#nav-footer.menu-footer-container ul#menu-footer.menu li#menu-item-8229.menu-item a {  text-transform: uppercase; color: #00a79d; line-height: 18px; }
 
-div#nav-footer.menu-footer-container ul#menu-footer.menu li#menu-item-8229.menu-item a:hover {  color: #F29EB3; }
+div#nav-footer.menu-footer-container ul#menu-footer.menu li#menu-item-8229.menu-item a:hover {  color: #ABC478; }
 
   /* footer */
 
@@ -850,7 +876,7 @@ padding-bottom:40px;
   }
   #nav-footer ul {
     list-style:none;
-    margin:0 0 0 110px;
+    margin:0 0 0 145px;
 
 
   }
@@ -864,7 +890,7 @@ padding-bottom:40px;
   
    #nav-footer ul li a {color: #808990; text-transform: lowercase; font-size: 12px; }
    
-   #nav-footer li a:hover {color: #F29EB3; text-decoration:none;   }
+   #nav-footer li a:hover {color: #00A79D; text-decoration:none;   }
   
 
   
@@ -1049,7 +1075,7 @@ section#content article header h1.entry-title, section#content article header h2
   }
 	  
   .entry-title a:hover {
-	  color: #F29EB3;
+	  color: #AAC379;
 	  text-decoration: none;
 	  
   }
@@ -1145,13 +1171,71 @@ div.post-header-date a span.month { text-align:center; color: #AAC379; text-tran
 }
 
 /* home */
+
+#home #did-you-know {
+	margin-left: 20px;
+	width: 750px;
+}
+#home #did-you-know h3.widget-title {
+	font-size: 28px;
+	line-height: 140px;
+	background: url(images/occasions-seal.png) no-repeat 35% 0%;
+	float:left;
+	position: relative;
+	z-index: 99999;
+	width: 200px;
+	margin-top: -25px;
+}
+#home #did-you-know div#testimonial-slideshow {
+	font-family: GillSansLight;
+	font-size: 18px;
+	float:right;
+}
+
+
 #home #content .entry-content h1 { color:#00A79D !important; font-family: GillSansLight, Arial, Calibri, verdana, sans-serif !important; text-transform: none !important; font-size: 32px !important;  margin-top:20px;    }
+#home #content .entry-content h2 { font-size: 18px; line-height: 22px; padding:0; margin: 0;   }
 #home #content .entry-content p { margin-bottom:0px;  }
+
+#home #content .entry-content {
+	border-top: 1px solid #C0E9E5;
+	float:left;
+	width: 750px;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+#home #content .entry-content p img {
+	background: none;
+	box-shadow: none;
+	margin-left: 5px;
+}
+#home hr {
+	border-color: #C0E9E5;
+	margin-bottom:10px;
+}
+	#home hr.top-line {
+		z-index: 0;
+		position: relative;
+		width: 140%;
+	}
+#home #content table {
+	line-height: 21px;
+	margin-bottom:10px;
+}
+#home #content table strong {
+	color: #ABC478;
+}
+
 
 #home .entry-content p {
   line-height: 28px;
   font-family: GillSansLight, Arial, Calibri, verdana, sans-serif !important;
   font-size:19px;
+}
+
+#home .entry-content h3 {
+	font-size: 28px;
 }
 
 .entry-content p	{ line-height:22px; color:#666666;}
@@ -2164,7 +2248,7 @@ span[frown] { transform: rotate(90deg); display:inline-block; color: #BBBBBB; }
 
 
 .gform_wrapper .gfield_required {
-    color: #F29EB3 !important;
+    color: #AAC379 !important;
 
 }
 
@@ -2343,6 +2427,49 @@ hr.blue {
 	width:100%;
 	height:30px;
 }
+
+/* =Newsletter Sign Up in Footer
+-------------------------------------------------------------- */
+
+#newsletter-sign-up {
+	font-family: GillSansRegular;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #fff;
+	background: #4FB9A6;
+	clear: both;
+	width: auto;
+	height: 37px;
+	padding: 10px 27px;
+}
+#newsletter-sign-up form {
+	display: inline;
+	margin-left: 10px;
+}
+#newsletter-sign-up input[type=text], #newsletter-sign-up input[type=email] {
+	background: #fff;
+	border: 0;
+	margin: 0 5px 0 0;
+	width: 200px;
+}
+#newsletter-sign-up input[type=submit] {
+	letter-spacing: 1px;
+	color: #00A79D;
+	background: #A2D4CC;
+	border: 3px double #fff;
+	margin: 0;
+	padding: 4px;
+}
+#newsletter-sign-up input[type=submit]:hover {
+	color: #fff;
+	background: #9BB966;
+}
+#newsletter-sign-up span {
+	top: 2px;
+	position: relative;
+}
+
 
 /* =Footer Pics
 -------------------------------------------------------------- */

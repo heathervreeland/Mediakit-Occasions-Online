@@ -379,6 +379,14 @@ function wfts_widgets_init() {
 		'before_widget' => '',
 		'after_widget' => ''
 	) );
+	// Home page sidebar 
+	register_sidebar( array(
+		'name' => __( 'Home Page Sidebar', 'wfts' ),
+		'id' => 'home-page-widget-area',
+		'description' => __( 'The home page widget area', 'wfts' ),
+		'before_widget' => '',
+		'after_widget' => ''
+	) );
 }
 /** Register sidebars by running wfts_widgets_init() on the widgets_init hook.
 */

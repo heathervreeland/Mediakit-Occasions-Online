@@ -111,6 +111,11 @@ global $post;
       </header>
 
       <div id="page" class="clearfix">
+      <?php if ( is_front_page() ) { ?>
+      <div id="home-slider">
+        <?php echo insert_slider(); ?>
+      </div>
+      <?php } ?>
       <?php if ( $template != 'full' ) { ?>
       <nav id="access-left">
         <?php
@@ -118,7 +123,10 @@ global $post;
           // clunky but effective manner to determine which menu to pull
           // current $post object is passed to is_section_chec() for ancestry access
 
-          if ( is_section_check( 'about-occasions', $post ) ) {
+          if ( is_front_page() || is_home() ) {
+            wp_nav_menu( array('menu' => 'Quick Links', 'container_class' => 'menu-sub-header', 'walker' => $walker ));
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Quick Links</li>');</script>";
+          } elseif ( is_section_check( 'about-occasions', $post ) ) {
             wp_nav_menu( array( 'menu' => 'about', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>About Occasions</li>');</script>";
           } elseif ( is_section_check( 'national', $post ) ) {
