@@ -2529,6 +2529,29 @@ ul#menu-footer-pics li.five a {
 	margin-right:0px;
 }
 
+/* =Print Edition Archives
+-------------------------------------------------------------- */
+
+.print-archive-item-wrap {
+	border-right: 1px solid #B4E5DF;
+	float: left;
+	margin: 0 15px 20px 0;
+	padding-right: 15px;
+}
+h2.print-archive-category-header {
+	clear: both;
+}
+.print-archive-date {
+	margin-top: 10px;
+}
+.print-archive-date a {
+	font-family: oswaldbook, AbadiMTCondExtraBoldRegular;
+	letter-spacing: 1px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: black;
+}
+
 
 /* =Mobile Safari ( iPad, iPhone and iPod Touch )
 -------------------------------------------------------------- */
