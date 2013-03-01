@@ -28,6 +28,7 @@ global $post;
 <!--[if IE 9 ]>    <html <?php language_attributes('html'); ?> class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes('html'); ?> class="no-js"> <!--<![endif]-->
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500' rel='stylesheet' type='text/css'>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="">

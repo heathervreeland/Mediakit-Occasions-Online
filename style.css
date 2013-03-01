@@ -402,7 +402,7 @@ textarea,
 input[type=text],
 input[type=submit]
 {
-  font-family: Arial, verdana, sans-serif; 
+  font-family: 'Raleway', Arial, verdana, sans-serif; 
 }
 pre {
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -445,7 +445,7 @@ h3 em,
 h4 em,
 h5 em,
 h6 em {
-  font-family: Arial, Calibri, verdana, sans-serif; 
+  font-family: 'Raleway', Arial, Calibri, verdana, sans-serif; 
 }
 
 
@@ -539,7 +539,7 @@ blockquote p {
 }
 
 blockquote cite {
-    font-family: Arial, Calibri, verdana, sans-serif;
+    font-family: 'Raleway', Arial, Calibri, verdana, sans-serif;
 	font-weight:normal;
 	color: #AAC379;
 	line-height: 40px; line-height:4.0rem;
@@ -582,15 +582,6 @@ a:active,
 a:hover {
   text-decoration:underline;
 }
-
-.becky-reese {
-	font-family: "Trebuchet MS",Arial,Helvetica,Sans-Serif;
-	text-transform:uppercase;
-	font-size: 17px;
-	letter-spacing: 1px;
-	line-height: 25px;
-}
-
 
 /* pipe seperator in upper and footer navs */
 .pipe {
@@ -881,11 +872,12 @@ padding-bottom:40px;
 
   }
   #nav-footer ul li {
-    float:left;
-    margin:0 10px 0 0;
+  float:left;
+  margin:0 10px 0 0;
 	border-right: 1px solid #808990;
 	padding: 0 10px 0 0;
 	line-height:80%;
+  font-weight: 500;
   }
   
    #nav-footer ul li a {color: #808990; text-transform: lowercase; font-size: 12px; }
@@ -1002,6 +994,7 @@ padding-bottom:40px;
     font-size:12px;font-size:1.2rem;
     line-height:18px;line-height:1.8rem;
     color:#999999;
+    font-weight: 500;
   }
   header.page {
     margin-left:30px;
@@ -1036,7 +1029,7 @@ padding-bottom:40px;
   }
 .page-title {
 	margin: 0 0 36px 0;
-	font-family: Arial, Calibri, verdana, sans-serif; 
+	font-family: 'Raleway', Arial, Calibri, verdana, sans-serif; 
 	font-size: 12px !important;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -1055,7 +1048,7 @@ padding-bottom:40px;
 /* page and entry titles */
 section#content article header h1.entry-title, section#content article header h2.entry-title {
   margin-bottom:13px;
-  font-family: LaneNarrowRegular, Arial, Calibri, verdana, sans-serif; 
+  font-family: 'Raleway', Arial, Calibri, verdana, sans-serif; 
   font-size: 20px;
   text-transform: none;
   color: #00a79d;
@@ -1112,7 +1105,7 @@ section#content article header h1.entry-title, section#content article header h2
 	margin: -26px 0 0 70px;
 	clear: none;  
 	color: #666666;
-   font-family: Arial, Calibri, verdana, sans-serif; 
+   font-family: 'Raleway', Arial, Calibri, verdana, sans-serif; 
    letter-spacing: 1px;
    text-transform: uppercase;
    font-size: 10px;
@@ -1128,7 +1121,7 @@ section#content article header h1.entry-title, section#content article header h2
 	border-right: 1px solid #AAC181;
 	margin-top: -55px;
 	padding:5px 7px 0 0;
-    font-family: Arial, Calibri, verdana, sans-serif; 
+    font-family: 'Raleway', Arial, Calibri, verdana, sans-serif; 
 
 
   }
@@ -1136,7 +1129,7 @@ section#content article header h1.entry-title, section#content article header h2
    .entry-meta .post-header-date a:hover { text-decoration: none;  }
 	
 div.post-header-date a span.year {display: none; }
-div.post-header-date a span.day { display: block; font-size: 30px; color: #AAC379; text-align: center; font-family: LaneNarrowRegular, Arial, Calibri, verdana, sans-serif;  }
+div.post-header-date a span.day { display: block; font-size: 30px; color: #AAC379; text-align: center; font-family: 'Raleway', Arial, Calibri, verdana, sans-serif;  }
 div.post-header-date a span.month { text-align:center; color: #AAC379; text-transform: uppercase; display: block; letter-spacing: 1px; font-weight: normal; font-family: GillSansRegular, Arial, Calibri, verdana, sans-serif; }	
 	
 	
@@ -1167,7 +1160,7 @@ div.post-header-date a span.month { text-align:center; color: #AAC379; text-tran
 
 /* page content */
 .entry-content  {  
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* home */
@@ -1736,9 +1729,6 @@ h3#reply-title {
 /* =Widget Areas
 -------------------------------------------------------------- */
 
-.race { color: #AAC379; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 10px; margin-top: 10px; }
-
-
 ol.colored,
 .widget-area ol {
   counter-reset:li; /* Initiate a counter */
@@ -2021,7 +2011,7 @@ aside#primary {
   		text-align: right;
 		font-size: 12px;
 		color: #7B7979;
-		font-family: Arial,Helvetica,Sans-Serif;
+		font-family: 'Raleway', Arial,Helvetica,Sans-Serif;
 		float:right;
 		width:250px;		
 }
@@ -2276,19 +2266,12 @@ span[frown] { transform: rotate(90deg); display:inline-block; color: #BBBBBB; }
 	display:none;	
 }
 
-
-
 /* =Tables
 -------------------------------------------------------------- */
 
-
 tr.blue-bg {background: #CEE8E3;}
-
-
 tr.blue-border {border-bottom: 1px dotted #CEE8E3;}
-
 table.table-border { border: 1px dotted #CEE8E3;  }
-
 table.table-border tr td {padding: 6px !important; }
 
 
@@ -2296,52 +2279,36 @@ table.table-border tr td {padding: 6px !important; }
 -------------------------------------------------------------- */
 
 #pretty-rates {
-
 	font-family: GillSansLight !important;
 	margin:0 auto;
-
 }
-
 
 #pretty-rates h3 {font-weight:normal; text-transform: uppercase; font-family:oswaldbook, AbadiMTCondExtraBoldRegular; color: #000000 !important; line-height:20px; line-height:2.6rem; }
 
 #pretty-rates p { font-size:20px; font-size:2.0rem; color: #00a79d; }
 
 #pretty-rates .three, #pretty-rates .four {
-clear:both;	
-	
+clear:both;		
 }
 
 #pretty-rates .three .issue  {
-
 	float: left;
-
 	width: 30%;
-
 	margin: 30px 1% 0 2%;
-	
 	text-align:center;
-
 }
 
 #pretty-rates .four .premium  {
-
 	float: left;
-
 	width: 22.85%;
-
 	margin: 30px 1%;
-	
 	text-align:center;
-
 }
 
 span.bracket {  color: #CCEDEB; padding:0 20px; font-size: 50px; font-family:AbadiMTCondExtraBoldRegular; }
 
-
 div.pretty-header { background:url(images/blue-line.png) repeat-x center 55px; clear:both;text-align:center; color: #00a79d; padding:40px 0 20px 0; }
 span.pretty-header-content { background-color:#fff; font-size: 30px; font-size: 3.0rem;   }
-
 
 
 /* Meet the Team
@@ -2552,6 +2519,59 @@ h2.print-archive-category-header {
 	color: black;
 }
 
+
+/* =Places & Professionals Guide
+-------------------------------------------------------------- */
+
+#places-professionals-guide #content {
+	width: 740px;
+}
+#places-professionals-guide h1.entry-title {
+	font-size: 44px !important;
+	text-align: center;
+	margin-top: 20px;
+}
+#places-professionals-guide h2 {
+	font-family: 'Raleway';
+	font-size: 28px;
+	color: #00A79D;
+}
+#places-professionals-guide h2.space-above {
+	margin-top: 50px;
+}
+#places-professionals-guide h3 {
+	font-family: 'Raleway';
+	font-size: 20px;
+	letter-spacing: normal;
+	text-transform: none;
+	color: #231F20;
+}
+
+#places-professionals-guide p {
+	font-size: 16px; 
+}
+#places-professionals-guide p.lead {
+	font-size: 20px;
+	text-align: center;
+	color: #000;
+}
+#places-professionals-guide p img {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	padding:0;
+}
+#places-professionals-guide img.alignleft,
+#places-professionals-guide img.alignright,
+#places-professionals-guide img.aligncenter {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#places-professionals-guide hr {
+	border-color: #B4E5DF;
+	clear: both;
+	margin: 40px 0;
+}
 
 /* =Mobile Safari ( iPad, iPhone and iPod Touch )
 -------------------------------------------------------------- */
