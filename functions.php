@@ -585,7 +585,7 @@ add_filter( 'excerpt_length', 'wfts_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function wfts_continue_reading_link() {
-	return ' <a class="read-more" href="'. get_permalink() . '">' . __( '<br /> Read more &raquo;' ) . '</a>';
+	return '<a class="read-more" href="'. get_permalink() . '">' . __( '<br /> Read more &raquo;' ) . '</a>';
 	return '';
 }
 

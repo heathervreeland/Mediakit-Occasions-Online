@@ -2583,6 +2583,10 @@ h2.print-archive-category-header {
 	border-bottom: 1px solid #c1e9e6;
 	margin-bottom: 20px; margin-bottom: 2.0rem;
 }
+#content .recent-post-content {
+  margin-left:210px;
+  margin-bottom:20px;
+}
 #content .recent-post h2 {
 	font-family: oswaldlight;
 	font-weight: normal;
@@ -2605,6 +2609,7 @@ h2.print-archive-category-header {
 	color: #c1c1c1;
 	margin: 0 0 10px; margin: 0 0 1.0rem;
 }
+#content .recent-post a.read-more, 
 #content .recent-post p a.read-more {
 	font-size: 11px; font-size: 1.1rem;
 	font-weight: 800;
