@@ -419,7 +419,7 @@ code {
 /* Main global 'theme' and typographic styles  */
 body {
 	color:#666;
-	background: url(images/oo_bg.jpg) repeat center;  
+	background: #f9f9f9;  
 }
 h1,
 h2,
@@ -774,6 +774,7 @@ div.menu-header ul#menu-navigation.menu li.active ul.sub-menu li a {
   #home #access-left {
 		float: right;
 		margin-left: 20px;
+		margin-bottom: 20px;
 		width: 21%;
   }
 	#home #access-left ul#menu-quick-links.menu li.sub-menu-header {
@@ -1191,7 +1192,6 @@ div.post-header-date a span.month { text-align:center; color: #AAC379; text-tran
 #home #content .entry-content p { margin-bottom:0px;  }
 
 #home #content .entry-content {
-	border-top: 1px solid #C0E9E5;
 	float:left;
 	width: 750px;
 	margin-left: 20px;
@@ -1962,7 +1962,7 @@ aside#primary {
 	margin-bottom: 20px;
   padding:20px;
   font-size:12px; font-size:1.2rem;
-  background: #e9e9e0;
+  background: #e7e7e7;
 }
   #menu-footer-nav li {
     line-height:36px; line-height:3.6rem;
@@ -2088,8 +2088,8 @@ textarea {
   padding:0 0 0 5px;
   font-size:14px;font-size:1.4rem;
   line-height:24px;line-height:2.4rem;
-  border:3px solid #D3D2CA;
-  background-color:#E9E9E0;
+  border:1px solid #e6e6e6;
+  background-color:#e7e7e7;
   color: #666;
 }
 input[type="text"] {
@@ -2571,6 +2571,56 @@ h2.print-archive-category-header {
 	border-color: #B4E5DF;
 	clear: both;
 	margin: 40px 0;
+}
+
+/* =Recent Posts on Home Page
+-------------------------------------------------------------- */
+
+#content #recent-posts-home {
+	margin: 20px; margin: 2.0rem;
+}
+#content .recent-post {
+	border-bottom: 1px solid #c1e9e6;
+	margin-bottom: 20px; margin-bottom: 2.0rem;
+}
+#content .recent-post h2 {
+	font-family: oswaldlight;
+	font-weight: normal;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+#content .recent-post h2 a {
+	color: #48b7af;
+}
+#content .recent-post h2 a:hover,
+#content .recent-post p a.read-more:hover {
+	text-decoration: none;
+	color: #adbf77;
+}
+#content .recent-post p {
+	font-size: 13px; font-size: 1.3rem;
+	line-height: 18px; line-height: 1.8rem;
+}
+#content .recent-post p.recent-post-date {
+	color: #c1c1c1;
+	margin: 0 0 10px; margin: 0 0 1.0rem;
+}
+#content .recent-post p a.read-more {
+	font-size: 11px; font-size: 1.1rem;
+	font-weight: 800;
+	line-height: 24px; line-height: 2.4rem;
+	text-transform: uppercase;
+	letter-spacing: 1px; letter-spacing: 0.1rem;
+	color: #000;
+}
+#content .recent-post .recent-post-image {
+	float: left;
+	margin-right: 2%;
+	margin-bottom: 2%;
+}
+#content .recent-post img.wp-post-image {
+	width: 200px;
+	height: auto;
 }
 
 /* =Mobile Safari ( iPad, iPhone and iPod Touch )

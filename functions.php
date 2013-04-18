@@ -574,7 +574,7 @@ function wfts_breadcrumb() {
  * @return int
  */
 function wfts_excerpt_length( $length ) {
-	return 40;
+	return 20;
 }
 add_filter( 'excerpt_length', 'wfts_excerpt_length' );
 
@@ -585,7 +585,7 @@ add_filter( 'excerpt_length', 'wfts_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function wfts_continue_reading_link() {
-	//return ' <a href="'. get_permalink() . '">' . __( '<br /> Continue reading' ) . '</a>';
+	return ' <a class="read-more" href="'. get_permalink() . '">' . __( '<br /> Read more &raquo;' ) . '</a>';
 	return '';
 }
 
