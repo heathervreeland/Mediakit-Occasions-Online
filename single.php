@@ -30,7 +30,7 @@ get_header(); ?>
 					</section><!-- .entry-meta -->
 
 
-<?php if ( has_post_thumbnail() ) { echo '<div class="post-image">' . get_the_post_thumbnail() . '</div>'; } ?>
+<?php // commented out by Ben Kaplan - 4/30/13 if ( has_post_thumbnail() ) { echo '<div class="post-image">' . get_the_post_thumbnail() . '</div>'; } ?>
 
 
 					<section class="entry-content">
