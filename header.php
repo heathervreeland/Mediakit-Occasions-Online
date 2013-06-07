@@ -157,12 +157,12 @@ global $post;
           } elseif ( is_section_check( 'events', $post ) ) {
             wp_nav_menu( array( 'menu' => 'events', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Events</li>');</script>";
-          } elseif ( is_section_check( 'marketing-program', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'marketing-programs', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
-            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Membership</li>');</script>";
           } elseif ( $post->post_name == 'our-reach' ) {
             wp_nav_menu( array( 'menu' => 'reach', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
             echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Our Reach</li>');</script>";
+          } elseif ( is_section_check( 'marketing-program', $post ) ) {
+            wp_nav_menu( array( 'menu' => 'marketing-programs', 'container_class' => 'menu-sub-header', 'walker' => $walker ) ); 
+            echo "<script>$('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Membership</li>');</script>";
           }
 
         ?>
