@@ -18,7 +18,7 @@
   
 <div id="newsletter-sign-up">
 
-<span>Receive special advertising discounts &amp; promotions!</span>
+<span>Keep up-to-date with events &amp; membership promotions!</span>
 
 <form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2900" accept-charset="UTF-8" onsubmit="return verifyRequired2900();" >
 <input type="hidden" name="redirect" value="http://mediakit.occasionsonline.com/thank-you/">
