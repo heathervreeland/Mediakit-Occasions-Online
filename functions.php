@@ -144,31 +144,28 @@
  * Enqueue scripts and styles 
  *  - taking care not to force site scripts on WP Admin sections
  *************************************************/
-if ( ! is_admin() ) {
+if ( !is_admin() ) {
   function init_wfts_scripts () {
+
     wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' );
+
       /* css for overlays */
     //wp_enqueue_style( 'shadowboxcss', get_stylesheet_directory_uri() . '/inc/js/shadowbox-3.0.3/shadowbox.css' );
-      /* using wp_deregister_script() to disable the versions that comes packaged with Wordpress */
-    wp_deregister_script('jquery'); 
-    wp_deregister_script('jquery-ui'); 
-      /* using wp_register_script() to register updated libraries */
-    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', false, '1.7.2', false );   
-    wp_register_script('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js', false, '1.8.11', true );   
-      /* using wp_enqueue_script() to load the updated libraries */
-    wp_enqueue_script('jquery'); 
-    wp_enqueue_script('jquery-ui'); 
+
       /* used for home page cycling (stage) images */
     //wp_enqueue_script( 'jquery-cycle', get_template_directory_uri() . '/inc/js/jquery.cycle.all.min.js', array( 'jquery' ), '2.88', true );
+
       /* used for overlays */
     //wp_enqueue_script( 'shadowbox', get_template_directory_uri() . '/inc/js/shadowbox-3.0.3/shadowbox.js', array( 'jquery' ), '2.88', true );
+
       /* document.ready() */
     wp_enqueue_script( 'wfts-plugins', get_stylesheet_directory_uri() . '/inc/js/plugins.js', array( 'jquery' ), '1.1', true );
     wp_enqueue_script( 'wfts-javascript', get_stylesheet_directory_uri() . '/inc/js/wfts.js', array( 'jquery', 'jquery-ui' ), '1.1', true );
+
   }
 
   // k, now add the scripts in the init
-  add_action('init', 'init_wfts_scripts');
+  add_action('wp_enqueue_scripts', 'init_wfts_scripts');
 
 /**
  * Clean WP Header tags
@@ -305,13 +302,6 @@ function wfts_filter_wp_title( $title, $separator ) {
 }
 add_filter( 'wp_title', 'wfts_filter_wp_title', 10, 2 );
 
-
-/**
- * Booleans
- * - is_section_check($parentname) - is the current page a parent or a child of the given $parentname?
- * - is_subpage() - is the current page a child?
- */
-include('inc/lib/function/boolean.php');
 
 
 /**
@@ -859,6 +849,13 @@ function wfts_related_posts() {
  *************************************************/
 include('inc/lib/function/inserts.php');
 include('inc/lib/function/breadcrumb.php');
+
+/**
+ * Booleans
+ * - is_section_check($parentname) - is the current page a parent or a child of the given $parentname?
+ * - is_subpage() - is the current page a child?
+ */
+include('inc/lib/function/boolean.php');
 
 /*
  * Modify standard Post Comment defaults 
