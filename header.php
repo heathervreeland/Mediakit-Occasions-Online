@@ -89,7 +89,7 @@ global $post;
       </nav>
 
       <header class="page">
-        <?php occasions_breadcrumbs($post); ?>
+        <?php if ( $post && !is_search() ) occasions_breadcrumbs($post); ?>
       </header>
 
       <div id="page" class="clearfix">
@@ -98,7 +98,7 @@ global $post;
         <?php echo insert_slider(); ?>
       </div>
       <?php } ?>
-      <?php if ( !is_page_template('page-full-width.php' ) ) { ?>
+      <?php if ( !is_page_template('page-full-width.php' ) && $post ) { ?>
       <nav id="access-left">
         <?php
 
@@ -106,48 +106,50 @@ global $post;
           // current $post object is passed to is_section_chec() for ancestry access
           // header image/text is called via jquery
 
-          if ( is_front_page() || is_home() ) {
-            wp_nav_menu( array('menu' => 'Quick Links', 'container_class' => 'menu-sub-header' ));
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Quick Links</li>') });</script>";
-          } elseif ( is_section_check( 'about-occasions', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'about', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>About Occasions</li>') });</script>";
-          } elseif ( is_section_check( 'national', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'national-print', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National</li>') });</script>";
-          } elseif ( is_section_check( 'local', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'local-editions', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local Editions</li>') });</script>";
-          } elseif ( is_section_check( 'destination-occasions', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'destination-occasions', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Destination</li>') });</script>";
-          } elseif ( is_section_check( 'online', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online</li>') });</script>";
-          } elseif ( is_section_check( 'print-advertising', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'print-advertising', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Print</li>') });</script>";
-          } elseif ( is_section_check( 'online-advertising', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online Advertising</li>') });</script>";
-          } elseif ( is_section_check( 'networking', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'networking-events', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Networking Events</li>') });</script>";
-          } elseif ( is_section_check( 'expo', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'expo', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Expo</li>') });</script>";
-          } elseif ( is_section_check( 'events', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'events', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Events</li>') });</script>";
-          } elseif ( $post->post_name == 'our-reach' ) {
-            wp_nav_menu( array( 'menu' => 'reach', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Our Reach</li>') });</script>";
-          } elseif ( is_section_check( 'marketing-program', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'marketing-programs', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Membership</li>') });</script>";
-          } elseif ( is_section_check( 'member-resources', $post ) ) {
-            wp_nav_menu( array( 'menu' => 'member-resources', 'container_class' => 'menu-sub-header' ) ); 
-            echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Membership Resources</li>') });</script>";
+          if (  !is_search() ) {
+            if ( is_front_page() || is_home() ) {
+              wp_nav_menu( array('menu' => 'Quick Links', 'container_class' => 'menu-sub-header' ));
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Quick Links</li>') });</script>";
+            } elseif ( is_section_check( 'about-occasions', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'about', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>About Occasions</li>') });</script>";
+            } elseif ( is_section_check( 'national', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'national-print', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>National</li>') });</script>";
+            } elseif ( is_section_check( 'local', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'local-editions', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Local Editions</li>') });</script>";
+            } elseif ( is_section_check( 'destination-occasions', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'destination-occasions', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Destination</li>') });</script>";
+            } elseif ( is_section_check( 'online', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online</li>') });</script>";
+            } elseif ( is_section_check( 'print-advertising', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'print-advertising', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Print</li>') });</script>";
+            } elseif ( is_section_check( 'online-advertising', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'online', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Online Advertising</li>') });</script>";
+            } elseif ( is_section_check( 'networking', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'networking-events', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Networking Events</li>') });</script>";
+            } elseif ( is_section_check( 'expo', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'expo', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Expo</li>') });</script>";
+            } elseif ( is_section_check( 'events', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'events', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Events</li>') });</script>";
+            } elseif ( $post->post_name == 'our-reach' ) {
+              wp_nav_menu( array( 'menu' => 'reach', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Our Reach</li>') });</script>";
+            } elseif ( is_section_check( 'marketing-program', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'marketing-programs', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Membership</li>') });</script>";
+            } elseif ( is_section_check( 'member-resources', $post ) ) {
+              wp_nav_menu( array( 'menu' => 'member-resources', 'container_class' => 'menu-sub-header' ) ); 
+              echo "<script>jQuery(document).ready( function($) { $('.menu-sub-header .menu').prepend('<li class=\'sub-menu-header\'>Membership Resources</li>') });</script>";
+            }
           }
 
         ?>
