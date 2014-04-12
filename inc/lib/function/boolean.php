@@ -17,6 +17,7 @@ function is_section_check( $parentname, $post ) {
 
     // get acnestors of current $post object
     $parents = get_post_ancestors($post);
+    //mydump($parents);
 
     // generate an empty array
     $parent_names = array();
@@ -28,11 +29,19 @@ function is_section_check( $parentname, $post ) {
       $parent_names[] = $the_post_name;
     }
 
-    // get a count of ancestors
-    $num_parents = count($parents);
+    $num_parents = 0; 
 
-    // get the ID from the last item in the array.  This is the top level ancestor.
-    $grandest_parent_id = $parents[$num_parents-1];
+    $grandest_parent_id = 0;
+
+    if ( !empty($parents) ) {
+
+      // get a count of ancestors
+      $num_parents = count($parents);
+
+      // get the ID from the last item in the array.  This is the top level ancestor.
+      $grandest_parent_id = $parents[$num_parents-1];
+
+    }
 
     // get the $post object of the top level ancestor
     $grandest_parent = get_page($grandest_parent_id); 
@@ -48,10 +57,15 @@ function is_section_check( $parentname, $post ) {
       $is_section = true;
     }
 
-    // is the top level ancestor located in the ancestor array, and does it's name equal $parentname?
-    if ( in_array($grandest_parent_id, $parents) && $parentname == $grandest_parent->post_name  ) {
-      $is_section = true;
+    if ( !empty($parents) ) {
+
+      // is the top level ancestor located in the ancestor array, and does it's name equal $parentname?
+      if ( in_array($grandest_parent_id, $parents) && $parentname == $grandest_parent->post_name  ) {
+        $is_section = true;
+      }
+
     }
+
 
   }
 
