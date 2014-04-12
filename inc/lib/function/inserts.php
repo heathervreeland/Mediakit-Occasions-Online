@@ -1,4 +1,14 @@
 <?php
+
+/*
+ * a pretty var_dump() 
+ *************************************************/
+function mydump($obj) {
+  echo '<pre>';
+  var_dump($obj);
+  echo '</pre>';
+}
+
 /*
  * Insert site generator info 
  *************************************************/
@@ -32,6 +42,7 @@
  * - Empty for now - insert slug name and content for post loop insert
  *************************************************/
 function add_after_loop() {
+  global $post;
   $page = get_page($post->ID);
   $pagename = $page->post_name;
   if($pagename == 'XX') {
